@@ -32,6 +32,6 @@ COPY install.sh ./
 RUN ["chmod", "+x", "install.sh"]
 RUN ["./install.sh"]
 
-ENTRYPOINT ["/usr/bin/nvim"]
+ENTRYPOINT ["/usr/local/bin/nvim"]
 
 # vim: ts=4 sw=4 expandtab ff=unix :
