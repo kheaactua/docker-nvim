@@ -24,7 +24,7 @@ LABEL                                                             \
 ARG INSTALL_PREFIX=/usr/local
 ENV INSTALL_PREFIX=${INSTALL_PREFIX}
 
-ARG NVIM_TAG=05fd647
+ARG NVIM_TAG=721f69c
 ENV NVIM_TAG=${NVIM_TAG}
 
 WORKDIR /bin
