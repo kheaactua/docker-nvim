@@ -2,7 +2,11 @@
 
 function install_neovim_deps()
 {
-	pip2 install neovim && pip3 install neovim
+	which pip2 2>/dev/null
+	if [[ 0 == "$?" ]]; then
+		pip2 install neovim
+	fi
+	pip3 install neovim
 }
 
 function install_neovim_alternatives()
