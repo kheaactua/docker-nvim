@@ -1,6 +1,7 @@
-ARG UBUNTU_TAG=18.04
+ARG UBUNTU_TAG=20.04
 FROM ubuntu:${UBUNTU_TAG}
 
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get -q -y update                              \
     && apt-get install -q -y                          \
         build-essential                               \
@@ -24,7 +25,7 @@ LABEL                                                             \
 ARG INSTALL_PREFIX=/usr/local
 ENV INSTALL_PREFIX=${INSTALL_PREFIX}
 
-ARG NVIM_TAG=721f69c
+ARG NVIM_TAG=4a996bc
 ENV NVIM_TAG=${NVIM_TAG}
 
 WORKDIR /bin
